@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ *
+ * @author gfox9
+ */
+public class Vectores {
+
+    public static void main(String[] args) {
+        // 1. Declarar una lista vacía
+        List<String> listaVacia = new ArrayList<>();
+
+        // 2. Declarar una lista con más de 5 elementos
+        List<Integer> listaConElementos = new ArrayList<>();
+        listaConElementos.add(1);
+        listaConElementos.add(2);
+        listaConElementos.add(3);
+        listaConElementos.add(4);
+        listaConElementos.add(5);
+        listaConElementos.add(6); // Añadiendo un sexto elemento
+
+        // 3. Encuentre la longitud de su lista
+        int longitud = listaConElementos.size();
+        System.out.println("Longitud de la lista: " + longitud);
+
+        // 4. Obtener el primer elemento, el elemento central y el último elemento de la lista
+        Integer primerElemento = listaConElementos.get(0);
+        Integer elementoCentral = listaConElementos.get(longitud / 2);
+        Integer ultimoElemento = listaConElementos.get(longitud - 1);
+        System.out.println("Primer elemento: " + primerElemento);
+        System.out.println("Elemento central: " + elementoCentral);
+        System.out.println("Último elemento: " + ultimoElemento);
+
+        // 5. Declara una lista llamada tipos_datos_mezclados
+        List<Object> tiposDatosMezclados = new ArrayList<>();
+        tiposDatosMezclados.add("Tu nombre");
+        tiposDatosMezclados.add(25); // Edad
+        tiposDatosMezclados.add(1.75); // Altura
+        tiposDatosMezclados.add("Soltero"); // Estado civil
+        tiposDatosMezclados.add("Tu dirección");
+
+        // 6. Declare una variable de lista llamada it_companies
+        List<String> itCompanies = new ArrayList<>();
+        itCompanies.add("Facebook");
+        itCompanies.add("Google");
+        itCompanies.add("Microsoft");
+        itCompanies.add("Apple");
+        itCompanies.add("IBM");
+        itCompanies.add("Oracle");
+        itCompanies.add("Amazon");
+
+        // 7. Añadir una empresa de TI a it_companies utilizando los métodos de inserción
+        itCompanies.add(2, "Nueva Empresa TI");
+
+        // 8. Comprobar si una determinada empresa existe en la lista it_companies
+        String empresaBuscada = "Microsoft";
+        boolean existe = itCompanies.contains(empresaBuscada);
+        System.out.println(empresaBuscada + " existe en la lista: " + existe);
+
+        // 9. Ordena la lista con el método sort()
+        Collections.sort(itCompanies);
+
+        // 10. Invierte la lista en orden descendente utilizando el método reverse()
+        Collections.reverse(itCompanies);
+
+        // 11. Elimine la primera empresa informática de la lista
+        itCompanies.remove(0);
+
+        // 12. Eliminar todas las empresas de TI de la lista
+        itCompanies.clear();
+
+        // Imprimir la lista resultante después de realizar todas las operaciones
+        System.out.println("Lista de empresas de TI después de todas las operaciones: " + itCompanies);
+    }
+}
